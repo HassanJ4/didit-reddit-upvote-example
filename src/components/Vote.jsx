@@ -49,11 +49,17 @@ export async function Vote({ postId, votes }) {
 
   async function upvote() {
     "use server";
+    if (!session?.user) {
+      throw new Error("NOT_LOGGED_IN");
+    }
     await handleVote(session?.user?.id, postId, 1);
   }
 
   async function downvote() {
     "use server";
+    if (!session?.user) {
+      throw new Error("NOT_LOGGED_IN");
+    }
     await handleVote(session?.user?.id, postId, -1);
   }
 
