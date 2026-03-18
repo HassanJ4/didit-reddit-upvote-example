@@ -9,7 +9,7 @@ export default function Tiptap({ value, onChange }) {
     content: value || '',
     immediatelyRender: false,
     onUpdate: ({ editor }) => {
-      onChange(editor.getHTML());
+      onChange(editor.getText());
     }
   })
 
