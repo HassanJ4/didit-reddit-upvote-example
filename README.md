@@ -17,6 +17,19 @@ The project is a work in progress and is not yet complete.
 - [x] Nested comments (recursive lists)
 - [x] User authentication
 
+## Requirements Met 
+
+- Page titles match the post title
+- Voting error handling for not logged-in users
+- Preventing multiple votes by the same user
+- Richer post creation experience using TipTap
+
+## What I found difficult
+
+- TipTap integration: The main challenge was figuring out that TipTap must be a client-side component because of React state, while my page and server actions were server-side. This required creating a new AddPost.jsx component.
+
+- Synchronizing editor with server: Making sure the TipTap content actually reaches the database required the hidden <input> field linked to React state.
+
 ## Setup instructions
 
 1. Fork the repository (check "copy the main branch only") and clone your fork to your local machine
